@@ -1,0 +1,47 @@
+[
+    {
+        "name":"Abdul Sami Haroon",
+        "designation":"Web Lead",
+        "twitter":"https://twitter.com/_sami_khan",
+        "linkedin":"https://www.linkedin.com/in/samihk/",
+        "github":"https://github.com/samihk",
+        "profileImage":"samiHaroon.jpg",
+        "website":""
+    },
+    {
+        "name":"Nasir Hussain",
+        "designation":"Web Developer",
+        "twitter":"https://twitter.com/_dev_nasir_/",
+        "linkedin":"https://www.linkedin.com/in/nasirhm/",
+        "github":"https://github.com/nasirhm",
+        "profileImage":"nasirHussain.jpg",
+        "website":""
+    },
+    {
+        "name":"Asad ullah Khalid",
+        "designation":"Web Developer",
+        "twitter":"",
+        "linkedin":"https://www.linkedin.com/in/asadkhalid305/",
+        "github":"https://github.com/asadkhalid305",
+        "profileImage":"asadullahKhalid.jpg",
+        "website":""
+    },
+    {
+        "name":"Mohammad Anas Saud",
+        "designation":"Web Developer",
+        "twitter":"",
+        "linkedin":"https://www.linkedin.com/in/mohammad-anas-saud-dev/",
+        "github":"",
+        "profileImage":"anasSaud.jpg",
+        "website":""
+    },
+    {
+        "name":"Mohammad Quanit",
+        "designation":"Web Developer",
+        "twitter":"",
+        "linkedin":"https://www.linkedin.com/mohammad-quanit-35b256154/",
+        "github":"https://www.github.com/Mohammad-Quanit/",
+        "profileImage":"muhammadQuanit.jpg",
+        "website":""
+    }
+]
