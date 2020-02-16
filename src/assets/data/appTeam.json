@@ -1,47 +1,38 @@
 [
     {
-        "name":"Name",
-        "designation":"App Development",
-        "twitter":"https://twitter.com/",
-        "linkedin":"https://www.linkedin.com/",
-        "github":"https://github.com/",
-        "profileImage":"",
-        "website":""
-    },
-    {
-        "name":"Name",
-        "designation":"App Development",
+        "name":"Asadullah Khan",
+        "designation":"App Lead",
         "twitter":"",
-        "linkedin":"https://www.linkedin.com/",
-        "github":"",
-        "profileImage":"",
-        "website":""
-    },
-    {
-        "name":"Name",
-        "designation":"App Development",
-        "twitter":"https://twitter.com/",
-        "linkedin":"https://www.linkedin.com/",
-        "github":"https://www.github.com/",
-        "profileImage":"",
-        "website":""
-    },
-    {
-        "name":"Name",
-        "designation":"App Development",
-        "twitter":"https://twitter.com/",
-        "linkedin":"https://linkedin.com/",
-        "github":"https://github.com/",
-        "profileImage":"",
-        "website":"https://github.com"
-    },
-    {
-        "name":"Name",
-        "designation":"App Development",
-        "twitter":"https://twitter.com/",
         "linkedin":"",
-        "github":"https://github.com/",
-        "profileImage":"",
+        "github":"https://github.com/aubykhan",
+        "profileImage":"asadullahKhan.jpg",
+        "website":""
+    },
+    {
+        "name":"Waleed Arshad",
+        "designation":"App Developer",
+        "twitter":"https://twitter.com/wal_33d",
+        "linkedin":"https://www.linkedin.com/in/waleed-arshad-98585259",
+        "github":"https://github.com/wal33d006",
+        "profileImage":"waleedArshad.jpg",
+        "website":""
+    },
+    {
+        "name":"Sana Zehra",
+        "designation":"App Developer",
+        "twitter":"",
+        "linkedin":"https://www.linkedin.com/in/sana-zehra-b860b543",
+        "github":"https://www.github.com/sanasz91mdev",
+        "profileImage":"sanaZehra.jpg",
+        "website":""
+    },
+    {
+        "name":"Rao Hunain Humail",
+        "designation":"App Developer",
+        "twitter":"https://twitter.com/hunainhumail",
+        "linkedin":"https://www.linkedin.com/in/hunain-humail/",
+        "github":"https://github.com/HunainHumail",
+        "profileImage":"hunainHumail.jpg",
         "website":""
     }
 ]
