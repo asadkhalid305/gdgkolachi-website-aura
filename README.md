@@ -2,7 +2,9 @@
 [![MadeWithVueJs.com shield](https://madewithvuejs.com/storage/repo-shields/1444-shield.svg)](https://madewithvuejs.com/p/aura/shield-link)
 [![Build Status](https://travis-ci.org/gdg-x/aura.svg?branch=master)](https://travis-ci.org/gdg-x/aura)
 
-[![Build Status](https://travis-ci.org/nasirhm/gdgkolachi-website-aura.svg?branch=develop)](https://travis-ci.org/nasirhm/gdgkolachi-website-aura)<img width="100%" src="https://raw.githubusercontent.com/GDG-Jalandhar/WebsiteData/master/promotion%20images/Aura%20v1.0.3.png">
+[![Build Status](https://travis-ci.org/nasirhm/gdgkolachi-website-aura.svg?branch=develop)](https://travis-ci.org/nasirhm/gdgkolachi-website-aura)
+
+<img width="100%" src="https://raw.githubusercontent.com/GDG-Jalandhar/WebsiteData/master/promotion%20images/Aura%20v1.0.3.png">
 
 Standard Web App for GDG's Communties. <br>
 [Demo](https://aura-client-master.firebaseapp.com/) <br>
