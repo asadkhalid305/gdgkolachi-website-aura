@@ -1,39 +1,53 @@
 <template>
-  <v-menu v-model="menu" :close-on-content-click="false" :nudge-width="200" offset-x>
+  <v-menu v-model="menu" fixed :close-on-content-click="false" :nudge-width="200" offset-x>
     <template v-slot:activator="{ on }">
-      <v-btn dark icon v-on="on">
+      <v-btn icon v-on="on">
+        <v-img :src="user.photoURL" class="border-circle" alt="profile-photo" />
         <!-- <v-icon>mdi-dots-vertical</v-icon> -->
-        Click me
+        <!-- Click me -->
       </v-btn>
     </template>
 
-    <v-card>
-      <v-list>
-        <v-list-item>
-          <v-list-item-avatar>
-            <img :src="user.photoURL" alt="profile-photo" />
-          </v-list-item-avatar>
+    <v-card class="border-rounded">
+      <!-- <v-list>
+        <v-list-tile>
+          <v-list-tile-avatar size="50">
+            <v-img :src="user.photoURL" class="border-circle img-fluid" alt="profile-photo"/>
+          </v-list-tile-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>{{user.displayName}}</v-list-item-title>
-            <v-list-item-subtitle>{{user.email}}</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+          <v-list-tile-content>
+            <v-list-tile-title>{{user.displayName}}</v-list-tile-title>
+            <v-list-tile-subtitle>{{user.email}}</v-list-tile-subtitle>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>-->
 
+      <v-container grid-list-md text-xs-center>
+        <v-layout row wrap align-center justify-center>
+          <v-flex xs12 md8>
+            <v-img :src="user.photoURL" class="border-circle img-fluid mx-auto" alt="profile-photo" />
+          </v-flex>
+          <v-flex xs12 align-center justify-center>
+            <h3 class="my-2">{{user.displayName}}</h3>
+            <h5>{{user.email}}</h5>
+          </v-flex>
+        </v-layout>
+      </v-container>
       <v-divider></v-divider>
 
       <v-list>
-        <v-list-item>
-          <v-list-item-action>
+        <v-list-tile class="text-xs-center">
+          <v-list-tile-action >
             <v-btn
               class="ml-0 google-font hidden-sm-and-down"
               style="text-transform: capitalize;"
               flat
               @click="logout"
-            >Logout</v-btn>
-          </v-list-item-action>
-        </v-list-item>
+            >
+              <v-icon>mdi-Logout</v-icon>Logout
+            </v-btn>
+          </v-list-tile-action>
+        </v-list-tile>
       </v-list>
     </v-card>
   </v-menu>
@@ -63,4 +77,12 @@ export default {
 </script>
 
 <style>
+  .v-menu__content {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+  .v-list__tile__action {
+    margin: 0 auto;
+  }
 </style>
