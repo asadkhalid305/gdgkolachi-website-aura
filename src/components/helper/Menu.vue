@@ -1,5 +1,12 @@
 <template>
-  <v-menu v-model="menu" fixed :close-on-content-click="false" :nudge-width="200" offset-x>
+  <v-menu
+    v-model="menu"
+    content-class="dropdown-logout"
+    fixed
+    :close-on-content-click="false"
+    :nudge-width="200"
+    offset-y
+  >
     <template v-slot:activator="{ on }">
       <v-btn icon v-on="on">
         <v-img :src="user.photoURL" class="border-circle" alt="profile-photo" />
@@ -9,23 +16,14 @@
     </template>
 
     <v-card class="border-rounded">
-      <!-- <v-list>
-        <v-list-tile>
-          <v-list-tile-avatar size="50">
-            <v-img :src="user.photoURL" class="border-circle img-fluid" alt="profile-photo"/>
-          </v-list-tile-avatar>
-
-          <v-list-tile-content>
-            <v-list-tile-title>{{user.displayName}}</v-list-tile-title>
-            <v-list-tile-subtitle>{{user.email}}</v-list-tile-subtitle>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>-->
-
       <v-container grid-list-md text-xs-center>
         <v-layout row wrap align-center justify-center>
           <v-flex xs12 md8>
-            <v-img :src="user.photoURL" class="border-circle img-fluid mx-auto" alt="profile-photo" />
+            <v-img
+              :src="user.photoURL"
+              class="border-circle img-fluid mx-auto"
+              alt="profile-photo"
+            />
           </v-flex>
           <v-flex xs12 align-center justify-center>
             <h3 class="my-2">{{user.displayName}}</h3>
@@ -37,14 +35,18 @@
 
       <v-list>
         <v-list-tile class="text-xs-center">
-          <v-list-tile-action >
+          <v-list-tile-action>
             <v-btn
               class="ml-0 google-font hidden-sm-and-down"
               style="text-transform: capitalize;"
               flat
               @click="logout"
             >
-              <v-icon>mdi-Logout</v-icon>Logout
+              <!-- 
+                Adding a logout icon over here will be fab
+                <v-icon>mdi-Logout</v-icon> 
+              -->
+              Logout
             </v-btn>
           </v-list-tile-action>
         </v-list-tile>
@@ -77,12 +79,12 @@ export default {
 </script>
 
 <style>
-  .v-menu__content {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-  }
-  .v-list__tile__action {
-    margin: 0 auto;
-  }
+.dropdown-logout.v-menu__content {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.v-list__tile__action {
+  margin: 0 auto;
+}
 </style>
