@@ -25,7 +25,7 @@
       style="text-transform: capitalize;"
       flat
       @click="signin"
-    >Signin</v-btn>
+    >Sign In</v-btn>
     <Menu v-else :userData="user.data" @userLogout="logout" />
   </v-toolbar>
 </template>

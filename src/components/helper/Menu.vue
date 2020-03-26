@@ -3,7 +3,7 @@
     :close-on-content-click="false"
     :nudge-width="200"
     v-model="menu"
-    content-class="dropdown-logout"
+    content-class="dropdown-logout border-rounded"
     offset-y
   >
     <v-btn icon slot="activator">
@@ -35,7 +35,7 @@
               flat
               @click="logout"
             >
-              <!-- logout logo needs to be implemented -->
+              <!-- <v-icon>input</v-icon> -->
               Logout
             </v-btn>
           </v-list-tile-action>
@@ -67,9 +67,7 @@ export default {
 
 <style>
 .dropdown-logout.v-menu__content {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  max-width: 236px;
 }
 .v-list__tile__action {
   margin: 0 auto;
