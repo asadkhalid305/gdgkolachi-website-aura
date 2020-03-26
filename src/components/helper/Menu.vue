@@ -1,25 +1,19 @@
 <template>
   <v-menu
-    v-model="menu"
-    content-class="dropdown-logout"
-    fixed
     :close-on-content-click="false"
     :nudge-width="200"
+    v-model="menu"
+    content-class="dropdown-logout"
     offset-y
   >
-    <template v-slot:activator="{ on }">
-      <v-btn icon v-on="on">
-        <v-img :src="user.photoURL" class="border-circle" alt="profile-photo" />
-        <!-- <v-icon>mdi-dots-vertical</v-icon> -->
-        <!-- Click me -->
-      </v-btn>
-    </template>
-
+    <v-btn icon slot="activator">
+      <img :src="user.photoURL" alt="profile-photo" class="border-circle toolbar-profile-icon" />
+    </v-btn>
     <v-card class="border-rounded">
       <v-container grid-list-md text-xs-center>
         <v-layout row wrap align-center justify-center>
           <v-flex xs12 md8>
-            <v-img
+            <img
               :src="user.photoURL"
               class="border-circle img-fluid mx-auto"
               alt="profile-photo"
@@ -32,9 +26,8 @@
         </v-layout>
       </v-container>
       <v-divider></v-divider>
-
       <v-list>
-        <v-list-tile class="text-xs-center">
+        <v-list-tile>
           <v-list-tile-action>
             <v-btn
               class="ml-0 google-font hidden-sm-and-down"
@@ -42,10 +35,7 @@
               flat
               @click="logout"
             >
-              <!-- 
-                Adding a logout icon over here will be fab
-                <v-icon>mdi-Logout</v-icon> 
-              -->
+              <!-- logout logo needs to be implemented -->
               Logout
             </v-btn>
           </v-list-tile-action>
@@ -61,10 +51,7 @@ export default {
   data() {
     return {
       user: {},
-      fav: true,
-      menu: false,
-      message: false,
-      hints: true
+      menu: false
     };
   },
   methods: {
@@ -86,5 +73,9 @@ export default {
 }
 .v-list__tile__action {
   margin: 0 auto;
+}
+.toolbar-profile-icon {
+  height: 100%;
+  width: 100%;
 }
 </style>
