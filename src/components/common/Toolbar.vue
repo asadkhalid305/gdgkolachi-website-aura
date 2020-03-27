@@ -19,14 +19,14 @@
       flat
       @click="onClick($event, link)"
     >{{ link.text }}</v-btn>
-    <!-- <v-btn
+    <v-btn
       v-if="!user.loggedIn"
       class="ml-0 google-font hidden-sm-and-down"
       style="text-transform: capitalize;"
       flat
       @click="signin"
-    >Signin</v-btn>
-    <Menu v-else :userData="user.data" @userLogout="logout" /> -->
+    >Sign In</v-btn>
+    <Menu v-else :userData="user.data" @userLogout="logout" />
   </v-toolbar>
 </template>
 

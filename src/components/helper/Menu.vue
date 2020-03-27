@@ -1,39 +1,45 @@
 <template>
-  <v-menu v-model="menu" :close-on-content-click="false" :nudge-width="200" offset-x>
-    <template v-slot:activator="{ on }">
-      <v-btn dark icon v-on="on">
-        <!-- <v-icon>mdi-dots-vertical</v-icon> -->
-        Click me
-      </v-btn>
-    </template>
-
-    <v-card>
-      <v-list>
-        <v-list-item>
-          <v-list-item-avatar>
-            <img :src="user.photoURL" alt="profile-photo" />
-          </v-list-item-avatar>
-
-          <v-list-item-content>
-            <v-list-item-title>{{user.displayName}}</v-list-item-title>
-            <v-list-item-subtitle>{{user.email}}</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-
+  <v-menu
+    :close-on-content-click="false"
+    :nudge-width="200"
+    v-model="menu"
+    content-class="dropdown-logout border-rounded"
+    offset-y
+  >
+    <v-btn icon slot="activator">
+      <img :src="user.photoURL" alt="profile-photo" class="border-circle toolbar-profile-icon" />
+    </v-btn>
+    <v-card class="border-rounded">
+      <v-container grid-list-md text-xs-center>
+        <v-layout row wrap align-center justify-center>
+          <v-flex xs12 md8>
+            <img
+              :src="user.photoURL"
+              class="border-circle img-fluid mx-auto"
+              alt="profile-photo"
+            />
+          </v-flex>
+          <v-flex xs12 align-center justify-center>
+            <h3 class="my-2">{{user.displayName}}</h3>
+            <h5>{{user.email}}</h5>
+          </v-flex>
+        </v-layout>
+      </v-container>
       <v-divider></v-divider>
-
       <v-list>
-        <v-list-item>
-          <v-list-item-action>
+        <v-list-tile>
+          <v-list-tile-action>
             <v-btn
               class="ml-0 google-font hidden-sm-and-down"
               style="text-transform: capitalize;"
               flat
               @click="logout"
-            >Logout</v-btn>
-          </v-list-item-action>
-        </v-list-item>
+            >
+              <!-- <v-icon>input</v-icon> -->
+              Logout
+            </v-btn>
+          </v-list-tile-action>
+        </v-list-tile>
       </v-list>
     </v-card>
   </v-menu>
@@ -45,10 +51,7 @@ export default {
   data() {
     return {
       user: {},
-      fav: true,
-      menu: false,
-      message: false,
-      hints: true
+      menu: false
     };
   },
   methods: {
@@ -63,4 +66,14 @@ export default {
 </script>
 
 <style>
+.dropdown-logout.v-menu__content {
+  max-width: 236px;
+}
+.v-list__tile__action {
+  margin: 0 auto;
+}
+.toolbar-profile-icon {
+  height: 100%;
+  width: 100%;
+}
 </style>
