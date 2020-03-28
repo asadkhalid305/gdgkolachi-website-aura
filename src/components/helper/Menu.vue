@@ -49,8 +49,9 @@
 export default {
   props: ["userData"],
   data() {
+    let self = this
     return {
-      user: {},
+      user: self.userData,
       menu: false
     };
   },
@@ -59,8 +60,11 @@ export default {
       this.$emit("userLogout");
     }
   },
-  mounted() {
-    this.user = this.userData;
+  watch: {
+    userData() {
+      let self = this
+      self.user = self.userData
+    }
   }
 };
 </script>
