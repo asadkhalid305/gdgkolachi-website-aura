@@ -51,11 +51,13 @@ export default {
   methods: {
     ...mapMutations(["toggleDrawer"]),
     onClick(e, item) {
+      let self = this
       e.stopPropagation();
       if (item.to || !item.href) return;
-      this.$vuetify.goTo(item.href);
+      self.$vuetify.goTo(item.href);
     },
     signin() {
+      let self = this
       var provider = new firebase.auth.GoogleAuthProvider();
 
       firebase
@@ -67,8 +69,8 @@ export default {
           let user = result.user;
 
           //will see if we need to manually set state. Otherwise main.js file will set it
-          // this.setLoggedIn(true);
-          // this.setUser(user);
+          // self.setLoggedIn(true);
+          // self.setUser(user);
         })
         .catch(error => {
           // Handle Errors here.
@@ -83,11 +85,12 @@ export default {
         });
     },
     logout() {
+      let self = this
       firebase
         .auth()
         .signOut()
         .then(function() {
-          // this.setLoggedIn(false);
+          // self.setLoggedIn(false);
         })
         .catch(function(error) {
           alert(error);
