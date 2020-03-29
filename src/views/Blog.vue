@@ -12,7 +12,7 @@
             class="google-font mt-3"
             style="font-size:110%"
           >Fill out this form and become a part of our community.</p>
-          <BlogRequest />
+          <BlogRequestForm />
           <p
             class="google-font mb-0"
             style="font-size:120%"
@@ -48,9 +48,9 @@
 
 <script>
 import ChapterDetails from "@/assets/data/chapterDetails.json";
-import BlogRequest from "@/components/blogs/RequestForm";
+import BlogRequestForm from "@/components/blogs/BlogRequestForm";
 export default {
-  components: { BlogRequest },
+  components: { BlogRequestForm },
   data() {
     return {
       ChapterDetails: ChapterDetails

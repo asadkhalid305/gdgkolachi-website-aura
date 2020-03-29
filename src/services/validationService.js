@@ -1,6 +1,6 @@
 import lodashTimes from 'lodash/times'
 
-export const validationService = (function() {
+export const validationService = (function () {
     // Note: The values in 'msg' are keys for translation. Add in en.json when adding new ones.
     const patterns = {
         required: {
@@ -89,8 +89,8 @@ export const validationService = (function() {
             regex: /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/,
             msg: 'Valid city format required'
         },
-        rangedNumber: {
-            msg: 'MUST_BE_BETWEEN'
+        range: {
+            msg: 'MUST BE INBETWEEN {min} - {max}'
         },
         integer: {
             regex: /^\d+$/,
@@ -111,8 +111,7 @@ export const validationService = (function() {
 
     //a list of all the rules which can have a range
     const requiresRange = {
-        timeInterval: true,
-        rangedNumber: true
+        range: true
     }
 
     var patternvalidations = {
@@ -144,9 +143,6 @@ export const validationService = (function() {
             (customErrMsg || patterns.embeddableDomain.msg),
         number: (customErrMsg, value) => !isNaN(value) || (customErrMsg || patterns.number.msg),
         positive: (customErrMsg, value) => value > -1 || (customErrMsg || patterns.positive.msg),
-        timeInterval: (customErrMsg, { min = 0, max = 2399 }, value) =>
-            (value >= min && value <= max) ||
-            (customErrMsg || patterns.timeInterval.msg.replace('{min}', min).replace('{max}', max)),
         threadCount: (customErrMsg, value) =>
             patterns.threadCount.regex.test(value) || (customErrMsg || patterns.threadCount.msg),
         regex: (customErrMsg, value) => {
@@ -160,9 +156,10 @@ export const validationService = (function() {
         alphaNumeric: (customErrMsg, value) =>
             patterns.alphaNumeric.regex.test(value) || (customErrMsg || patterns.alphaNumeric.msg),
         city: (customErrMsg, value) => patterns.city.regex.test(value) || (customErrMsg || patterns.city.msg),
-        rangedNumber: (customErrMsg, { min = 0, max = 65535 }, value) =>
-            (value >= min && value <= max) ||
-            (customErrMsg || patterns.rangedNumber.msg.replace('{min}', min).replace('{max}', max)),
+        range: (customErrMsg, limit, value) => {
+            return (value.length >= limit.min && value.length <= limit.max) ||
+                (customErrMsg || patterns.range.msg.replace('{min}', limit.min).replace('{max}', limit.max))
+        },
         integer: (customErrMsg, value) => patterns.integer.regex.test(value) || (customErrMsg || patterns.integer.msg)
     }
 
@@ -191,7 +188,7 @@ export const validationService = (function() {
             if (pattern in patternvalidations) {
                 if (requiresRange[pattern]) {
                     rulesList.push(
-                        patternvalidations[pattern].bind(null, customErrorMessages[index], rangeMap[pattern] || {})
+                        patternvalidations[pattern].bind(null, customErrorMessages[index], rangeMap || {})
                     )
                 } else {
                     rulesList.push(patternvalidations[pattern].bind(null, customErrorMessages[index]))

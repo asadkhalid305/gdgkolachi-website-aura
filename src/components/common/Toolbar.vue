@@ -17,7 +17,7 @@
       class="ml-0 google-font hidden-sm-and-down"
       style="text-transform: capitalize;"
       flat
-      @click="onClick($event, link)"
+      @click.prevent="navigate(link)"
     >{{ link.text }}</v-btn>
     <v-btn
       v-if="!user.loggedIn"
@@ -26,14 +26,25 @@
       flat
       @click="signin"
     >Sign In</v-btn>
-    <Menu v-else :userData="user.data" @userLogout="logout" />
+    <template v-else>
+      <v-btn
+        :to="{ name: 'blog' }"
+        class="ml-0 google-font hidden-sm-and-down"
+        style="text-transform: capitalize;"
+        flat
+        @click="navigateToBlog"
+      >Blog</v-btn>
+      <Profile :userData="user.data" @userLogout="logout" />
+    </template>
   </v-toolbar>
 </template>
 
 <script>
+//Components
 import ChapterDetails from "@/assets/data/chapterDetails.json";
-import Menu from "../helper/Menu";
-// Utilities
+import Profile from "../helper/Profile";
+
+//Utilities
 import { mapGetters, mapMutations } from "vuex";
 import firebase from "firebase";
 
@@ -44,20 +55,33 @@ export default {
       menu: false
     };
   },
-  components: { Menu },
+  components: { Profile },
   computed: {
     ...mapGetters(["links", "user"])
   },
   methods: {
     ...mapMutations(["toggleDrawer"]),
-    onClick(e, item) {
-      let self = this
-      e.stopPropagation();
+
+    navigate(item) {
+      let self = this;
       if (item.to || !item.href) return;
       self.$vuetify.goTo(item.href);
     },
+
+    navigateToBlog() {
+      let self = this;
+
+      let item = {
+        text: "Blog",
+        to: "/blog",
+        icon: "group"
+      };
+
+      self.navigate(item);
+      debugger;
+    },
     signin() {
-      let self = this
+      let self = this;
       var provider = new firebase.auth.GoogleAuthProvider();
 
       firebase
@@ -85,7 +109,8 @@ export default {
         });
     },
     logout() {
-      let self = this
+      let self = this;
+
       firebase
         .auth()
         .signOut()

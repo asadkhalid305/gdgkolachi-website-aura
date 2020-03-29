@@ -13,12 +13,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '*',
-      name: 'home',
+      name: 'default',
       component: Home
     },
     {
@@ -47,9 +42,14 @@ export default new Router({
       component: () => import('./views/Contact.vue')
     },
     {
-      path: '/request',
+      path: '/blog',
       name: 'blog',
-      component: () => import('./views/BlogRequest.vue')
+      component: () => import('./views/Blog.vue')
+    },
+    {
+      path: '*',
+      name: 'wild',
+      component: Home
     }
   ]
 })

@@ -1,74 +1,74 @@
 [
     {
-        "name":"Muhammad Ahad",
-        "designation":"GDG Member",
-        "twitter":"https://twitter.com/ahad9615",
-        "linkedin":"https://www.linkedin.com/in/ahad9615/",
-        "github":"https://github.com/muhammadahad96",
-        "profileImage":"muhammadAhad.jpg",
-        "website":""
+        "name": "Muhammad Ahad",
+        "designation": "GDG Member",
+        "twitter": "https://twitter.com/ahad9615",
+        "linkedin": "https://www.linkedin.com/in/ahad9615/",
+        "github": "https://github.com/muhammadahad96",
+        "profileImage": "muhammadAhad.jpg",
+        "website": ""
     },
     {
-        "name":"Sabah Karim",
-        "designation":"GDG Member",
-        "twitter":"",
-        "linkedin":"https://www.linkedin.com/in/sabah-karim/",
-        "github":"https://github.com/SabahKarim",
-        "profileImage":"sabahKarim.jpg",
-        "website":""
+        "name": "Sabah Karim",
+        "designation": "GDG Member",
+        "twitter": "",
+        "linkedin": "https://www.linkedin.com/in/sabah-karim/",
+        "github": "https://github.com/SabahKarim",
+        "profileImage": "sabahKarim.jpg",
+        "website": ""
     },
     {
-        "name":"Hiza Fatima",
-        "designation":"GDG Member",
-        "twitter":"https://twitter.com/hizaayy",
-        "linkedin":"",
-        "github":"",
-        "profileImage":"",
-        "website":""
+        "name": "Hiza Fatima",
+        "designation": "GDG Member",
+        "twitter": "https://twitter.com/hizaayy",
+        "linkedin": "",
+        "github": "",
+        "profileImage": "",
+        "website": ""
     },
     {
-        "name":"Dennis Rufi",
-        "designation":"GDG Member",
-        "twitter":"https://twitter.com/DennisRufiGill",
-        "linkedin":"https://www.linkedin.com/in/dennisrufigill/",
-        "github":"https://github.com/dennisrufigill",
-        "profileImage":"dennisRufi.jpg",
-        "website":""
+        "name": "Dennis Rufi",
+        "designation": "GDG Member",
+        "twitter": "https://twitter.com/DennisRufiGill",
+        "linkedin": "https://www.linkedin.com/in/dennisrufigill/",
+        "github": "https://github.com/dennisrufigill",
+        "profileImage": "dennisRufi.jpg",
+        "website": ""
     },
     {
-        "name":"Muhammad Ibrahim",
-        "designation":"GDG Member",
-        "twitter":"",
-        "linkedin":"https://www.linkedin.com/in/ibrahim-khalil-60874617a/",
-        "github":"",
-        "profileImage":"ibrahimKhalil.jpg",
-        "website":""  
+        "name": "Muhammad Ibrahim",
+        "designation": "GDG Member",
+        "twitter": "",
+        "linkedin": "https://www.linkedin.com/in/ibrahim-khalil-60874617a/",
+        "github": "",
+        "profileImage": "ibrahimKhalil.jpg",
+        "website": ""
     },
     {
-        "name":"Samiah Bilal",
-        "designation":"GDG Member",
-        "twitter":"",
-        "linkedin":"https://www.linkedin.com/in/samiah-bilal-483619171/",
-        "github":"",
-        "profileImage":"",
-        "website":""  
+        "name": "Samiah Bilal",
+        "designation": "GDG Member",
+        "twitter": "",
+        "linkedin": "https://www.linkedin.com/in/samiah-bilal-483619171/",
+        "github": "",
+        "profileImage": "",
+        "website": ""
     },
     {
-        "name":"Zain Ahmed",
-        "designation":"GDG Member",
-        "twitter":"https://twitter.com/ZainAhmed05",
-        "linkedin":"https://www.linkedin.com/in/zainahmed97/",
-        "github":"https://github.com/zainahmed0597",
-        "profileImage":"zainAhmed.jpg",
-        "website":""  
+        "name": "Zain Ahmed",
+        "designation": "GDG Member",
+        "twitter": "https://twitter.com/ZainAhmed05",
+        "linkedin": "https://www.linkedin.com/in/zainahmed97/",
+        "github": "https://github.com/zainahmed0597",
+        "profileImage": "zainAhmed.jpg",
+        "website": ""
     },
     {
-        "name":"Mansoor Ahmed",
-        "designation":"GDG Member",
-        "twitter":"https://twitter.com/MansoorAhmed_d",
-        "linkedin":"https://github.com/mansoorahmed-asterics",
-        "github":"https://www.linkedin.com/in/mansoor-ahmed-23b509147/",
-        "profileImage":"mansoorAhmed.jpg",
-        "website":""  
+        "name": "Mansoor Ahmed",
+        "designation": "GDG Member",
+        "twitter": "https://twitter.com/MansoorAhmed_d",
+        "linkedin": "https://github.com/mansoorahmed-asterics",
+        "github": "https://www.linkedin.com/in/mansoor-ahmed-23b509147/",
+        "profileImage": "mansoorAhmed.jpg",
+        "website": ""
     }
 ]
